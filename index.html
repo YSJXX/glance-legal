@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>개인정보 처리방침 | Privacy Policy — YouTube AI 요약 (Glance)</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #5a5a5a;
+    --line: #e3e3e3;
+    --accent: #d64545;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161a;
+      --fg: #e8e8e8;
+      --muted: #a3a3a3;
+      --line: #2c2f36;
+      --accent: #ff7a7a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+    line-height: 1.65;
+  }
+  main {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 20px 80px;
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 4px; }
+  h2 { font-size: 1.15rem; margin-top: 2.2em; border-top: 1px solid var(--line); padding-top: 1.2em; }
+  .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 2em; }
+  .lang-toggle {
+    display: flex; gap: 8px; margin-bottom: 2em;
+  }
+  .lang-toggle button {
+    border: 1px solid var(--line); background: transparent; color: var(--fg);
+    padding: 6px 14px; border-radius: 999px; cursor: pointer; font-size: 0.9rem;
+  }
+  .lang-toggle button[aria-pressed="true"] { background: var(--accent); color: #fff; border-color: var(--accent); }
+  ul { padding-left: 1.3em; }
+  li { margin-bottom: 0.4em; }
+  table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 0.92rem; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  a { color: var(--accent); }
+  [data-lang="en"] { display: none; }
+  body.lang-en [data-lang="ko"] { display: none; }
+  body.lang-en [data-lang="en"] { display: block; }
+</style>
+</head>
+<body>
+<main>
+  <div class="lang-toggle">
+    <button id="btn-ko" aria-pressed="true" onclick="setLang('ko')">한국어</button>
+    <button id="btn-en" aria-pressed="false" onclick="setLang('en')">English</button>
+  </div>
+
+  <div data-lang="ko">
+    <h1>개인정보 처리방침</h1>
+    <p class="meta">YouTube AI 요약 (Glance) · 시행일: 2026년 7월 15일</p>
+
+    <p>"YouTube AI 요약"(이하 "서비스")은 사용자가 구독한 유튜브 채널의 신규 영상을 자동으로 요약해 보여주는 개인용 애플리케이션입니다. 본 서비스는 아래와 같이 최소한의 정보만 수집하며, 광고나 제3자 분석(애널리틱스) 목적의 추적을 하지 않습니다.</p>
+
+    <h2>1. 수집하는 정보</h2>
+    <table>
+      <tr><th>항목</th><th>수집 목적</th></tr>
+      <tr><td>Google 계정 이메일, 표시 이름</td><td>로그인 및 계정 식별</td></tr>
+      <tr><td>Google OAuth 액세스·리프레시 토큰</td><td>사용자를 대신해 YouTube Data API(읽기 전용 스코프)를 호출하기 위한 인증</td></tr>
+      <tr><td>유튜브 구독 채널 목록 및 사용자가 관리하도록 선택한 채널</td><td>피드 구성, 신규 영상 감지</td></tr>
+      <tr><td>영상 자막(스크립트) 텍스트</td><td>AI 요약 생성 (Google Gemini API로 전송)</td></tr>
+      <tr><td>저장한 영상, 평가(rating), 읽음/안읽음 상태</td><td>서비스 이용 기록 저장 및 피드 개인화</td></tr>
+      <tr><td>Expo Push Token</td><td>신규 요약 알림 발송</td></tr>
+    </table>
+
+    <h2>2. 제3자 제공 및 처리위탁</h2>
+    <p>서비스 운영을 위해 아래 업체에 처리를 위탁하거나 정보가 전달됩니다. 각 업체는 자체 개인정보 처리방침을 따릅니다.</p>
+    <ul>
+      <li><strong>Google (OAuth 로그인 / YouTube Data API)</strong> — 로그인 인증 및 구독 채널·영상 정보 조회</li>
+      <li><strong>Google Gemini API</strong> — 영상 자막 텍스트를 전송하여 요약문 생성</li>
+      <li><strong>Supabase</strong> — 데이터베이스 및 인증 호스팅</li>
+      <li><strong>Upstash (Redis)</strong> — 작업 큐 및 일일 사용량 관리 (개인정보 장기 저장 없음)</li>
+      <li><strong>Expo</strong> — 푸시 알림 발송 인프라</li>
+    </ul>
+    <p>서비스는 광고 네트워크를 사용하지 않으며, 제3자 분석·추적 SDK(예: 애널리틱스 툴)를 포함하지 않습니다.</p>
+
+    <h2>3. 보관 기간 및 삭제</h2>
+    <p>계정 삭제를 요청하면 유예 기간(grace period) 후 다음 데이터가 영구 삭제됩니다: 저장한 영상, 평가, 푸시 토큰, 채널 구독 목록, OAuth 토큰. 계정 자체는 참조 무결성을 위해 이메일·표시 이름을 익명화한 뒤 보관되며, 로그인 계정(Supabase Auth)은 함께 삭제됩니다.</p>
+
+    <h2>4. 이용자의 권리</h2>
+    <p>본인의 개인정보 열람, 정정, 삭제를 요청할 수 있습니다. 앱 내 계정 삭제 기능을 사용하거나 아래 이메일로 문의해 주세요.</p>
+
+    <h2>5. 아동의 개인정보</h2>
+    <p>본 서비스는 만 14세 미만 아동을 대상으로 하지 않으며, 아동으로부터 고의로 개인정보를 수집하지 않습니다.</p>
+
+    <h2>6. 문의</h2>
+    <p>개인정보 관련 문의: <a href="mailto:424tjdwns@gmail.com">424tjdwns@gmail.com</a></p>
+
+    <h2>7. 정책 변경</h2>
+    <p>본 처리방침은 서비스 변경에 따라 갱신될 수 있으며, 변경 시 이 페이지의 시행일을 갱신합니다.</p>
+  </div>
+
+  <div data-lang="en">
+    <h1>Privacy Policy</h1>
+    <p class="meta">YouTube AI Summary (Glance) · Effective: July 15, 2026</p>
+
+    <p>"YouTube AI Summary" ("the Service") is a personal-use application that automatically summarizes new videos from the YouTube channels a user subscribes to. The Service collects the minimum information necessary to operate and does not use advertising or third-party analytics/tracking.</p>
+
+    <h2>1. Information We Collect</h2>
+    <table>
+      <tr><th>Data</th><th>Purpose</th></tr>
+      <tr><td>Google account email, display name</td><td>Login and account identification</td></tr>
+      <tr><td>Google OAuth access/refresh tokens</td><td>Authenticating calls to the YouTube Data API (read-only scope) on the user's behalf</td></tr>
+      <tr><td>YouTube subscription list and channels the user chooses to manage</td><td>Building the feed, detecting new videos</td></tr>
+      <tr><td>Video caption/transcript text</td><td>Generating AI summaries (sent to Google Gemini API)</td></tr>
+      <tr><td>Saved videos, ratings, read/unread status</td><td>Usage history and feed personalization</td></tr>
+      <tr><td>Expo push token</td><td>Delivering new-summary notifications</td></tr>
+    </table>
+
+    <h2>2. Third-Party Processors</h2>
+    <p>The Service relies on the following processors, each governed by its own privacy policy:</p>
+    <ul>
+      <li><strong>Google (OAuth login / YouTube Data API)</strong> — authentication and access to subscription/video data</li>
+      <li><strong>Google Gemini API</strong> — receives transcript text to generate summaries</li>
+      <li><strong>Supabase</strong> — database and authentication hosting</li>
+      <li><strong>Upstash (Redis)</strong> — job queue and daily quota tracking (no long-term personal data storage)</li>
+      <li><strong>Expo</strong> — push notification delivery infrastructure</li>
+    </ul>
+    <p>The Service does not use advertising networks or third-party analytics/tracking SDKs.</p>
+
+    <h2>3. Retention and Deletion</h2>
+    <p>When a user requests account deletion, after a grace period the following data is permanently deleted: saved videos, ratings, push tokens, channel subscriptions, and OAuth tokens. The account row itself is retained with email and display name anonymized (for referential integrity), and the underlying auth account is deleted.</p>
+
+    <h2>4. Your Rights</h2>
+    <p>You may request access to, correction of, or deletion of your personal data using the in-app account deletion feature or by contacting the email below.</p>
+
+    <h2>5. Children's Privacy</h2>
+    <p>The Service is not directed at children under 14 and does not knowingly collect personal information from children.</p>
+
+    <h2>6. Contact</h2>
+    <p>For privacy inquiries: <a href="mailto:424tjdwns@gmail.com">424tjdwns@gmail.com</a></p>
+
+    <h2>7. Changes to This Policy</h2>
+    <p>This policy may be updated as the Service changes. The effective date on this page will be updated accordingly.</p>
+  </div>
+
+  <script>
+    function setLang(lang) {
+      document.body.classList.toggle('lang-en', lang === 'en');
+      document.getElementById('btn-ko').setAttribute('aria-pressed', lang === 'ko');
+      document.getElementById('btn-en').setAttribute('aria-pressed', lang === 'en');
+    }
+  </script>
+</main>
+</body>
+</html>
